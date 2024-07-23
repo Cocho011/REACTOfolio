@@ -1,42 +1,103 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --primary-color: #8456a5; /* Purple */
+  --secondary-color: #ff69b4; /* Pink */
+  --accent-color: #00ced1; /* Teal */
+  --background-color: #b0e0e6; /* Baby blue */
+  --text-color: #ffffff; /* White */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--primary-color);
+  padding: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--secondary-color);
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav a {
+  color: var(--text-color);
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
-.card {
-  padding: 2em;
+nav a:hover {
+  color: var(--accent-color);
 }
 
-.read-the-docs {
-  color: #888;
+.section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: var(--secondary-color);
+}
+
+.section p, .section a {
+  color: var(--text-color);
+}
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project {
+  text-align: center;
+  max-width: 200px; /* Adjust the max-width as needed */
+}
+
+.project img {
+  width: 100%; /* Makes the image responsive */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between the images */
+}
+
+.resume-images img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto;
+  border: 2px solid var(--primary-color); /* Optional: add a border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
 }
